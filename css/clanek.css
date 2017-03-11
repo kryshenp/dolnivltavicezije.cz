@@ -1,0 +1,85 @@
+.col-sm-13 img {
+	position: relative;
+	margin-bottom: 10px;
+	-width: 10%;
+
+}
+
+.clanek-image-caption {
+	font-weight: bold;
+}
+
+.clanek-image-source {
+	font-size: .7em;
+	margin-bottom: 5px;
+}
+
+.imagecontainer {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #848484;
+	width: 650px;
+}
+
+.clanky-footer{
+	margin-left: 5%;
+	margin-bottom: 5%;
+	margin-right: 5%;
+}
+
+.clanky {
+	margin-top: -50px;
+}
+
+.text-center {
+	margin-left: -30px;
+}
+
+.clanek-language-but {
+	float: right;
+}
+
+#clanek-title {
+	margin-top: 30px;
+}
+
+.language-link {
+	position: absolute;
+	float: left;
+	right: 25px;
+	top: 15px;
+	color: white;
+	font-weight: bold;
+}
+
+.language-link a {
+	color: white;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+.language-link a:hover {
+	color: gray;
+	text-decoration: none;
+}
+
+.navbar-brand_new {
+color: red;
+}
+
+.articles-list {
+	padding-bottom: 3px;
+	font-style: italic;
+}
+
+.articles-list-poem {
+	padding-bottom: 3px;
+	font-style: italic;
+	list-style: none;
+}
+
+.paragraph {
+	font-size: 1em;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+	font-weight: 400;
+}

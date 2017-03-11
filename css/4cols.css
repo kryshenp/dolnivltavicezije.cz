@@ -1,0 +1,61 @@
+.clanky {
+	padding-top: 50px;
+}
+
+.col { 
+	padding:1em 0; 
+	text-align:center;}
+
+.col a:hover {
+	text-decoration: none;
+}
+
+.article-caption {
+	color: black;
+	font-weight: bold;
+}
+
+.article-caption:hover {
+	text-decoration: none;
+	color: white;
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.span_4_of_4 {
+	width: 100%; 
+}
+
+.span_3_of_4 {
+	width: 74.6%; 
+}
+
+.span_2_of_4 {
+	width: 49.2%; 
+}
+
+.span_1_of_4 {
+	width: 23.8%; 
+}
+
+
+@media screen and (max-width: 1100px) {
+	.col {
+		padding: 0 10px;
+		text-align: center;
+		width: 49%;
+		margin-left: 0px;
+		padding-left:  0px;
+		margin-right: 0px;
+		padding-right:  0px;
+	}
+}
+
+
+@media screen and (max-width: 650px) {
+	.col {
+		width: 100%;
+		padding: 0 10px;
+	}
+}

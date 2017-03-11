@@ -1,0 +1,82 @@
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.map-clearfix:before,
+.map-clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.map-clearfix:after {
+    clear: both;
+}
+
+.map-clearfix {
+    *zoom: 1;
+}
+
+.map-container {
+	width: 100%;
+	position: relative;
+}
+
+.map-container > header {
+	width: 90%;
+	max-width: 1240px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 30px 50px 30px;
+	z-index: 31;
+}
+
+.map-container > header {
+	padding: 60px 30px 50px;
+	text-align: center;
+}
+
+.map-container > header h1 {
+	font-size: 34px;
+	line-height: 38px;
+	margin: 0 auto;
+	font-weight: 400;
+	color: #FF0000;
+	z-index: 31;
+
+}
+
+.map-container > header h1 span {
+	display: block;
+	font-size: 20px;
+	font-weight: 300;
+	color: white;
+}
+
+.map-main > p {
+	text-align: center;
+	padding: 50px 20px;
+}
+
+a.map-show_hide {
+	color: #A9A9A9;
+}
+
+a.map-show_hide:hover {
+    color: #696969;
+}
+
+.map-footer {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	z-index: 10000;
+
+}
