@@ -1,145 +1,123 @@
 // When the window has finished loading create our google map below
     google.maps.event.addDomListener(window, 'load', initMap);
-            
+
     var overlay;
     DVOverlay.prototype = new google.maps.OverlayView();
 
 
     function initMap() {
-        debugger;
                 // Basic options for a simple Google Map
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
+                var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
-            zoom: 17,
+                    zoom: 17,
 
                     // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(48.696128, 14.074797), // Dolni Vltavice
+                    center: new google.maps.LatLng(48.696128, 14.074797), // Dolni Vltavice
 
-            mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.DEFAULT,
-                position: google.maps.ControlPosition.RIGHT_BOTTOM
-            },
+                    mapTypeControlOptions: {
+                      style: google.maps.MapTypeControlStyle.DEFAULT,
+                      position: google.maps.ControlPosition.RIGHT_BOTTOM
+                    },
 
-            zoomControlOptions: {
-                position: google.maps.ControlPosition.LEFT_CENTER
-            },
+                    zoomControlOptions: {
+                      position: google.maps.ControlPosition.LEFT_CENTER
+                    },
 
-            streetViewControlOptions: {
-                position: google.maps.ControlPosition.LEFT_BOTTOM
-            },
+                    streetViewControlOptions: {
+                      position: google.maps.ControlPosition.LEFT_BOTTOM
+                    },
 
-            
-                    // How you would like to style the map. 
+
+                    // How you would like to style the map.
                     // This is where you would paste any style found on Snazzy Maps.
-            styles: [
-                {
-                    "featureType":"administrative",
-                    "elementType":"labels.text.fill",
-                    "stylers":[
-                        {"color":"#444444"}
-                    ]
-                },
-                {
-                    "featureType":"administrative.country",
-                    "elementType":"geometry",
-                    "stylers":[
-                        {"visibility":"off"},
-                        {"hue":"#ff0000"},
-                        {"saturation":"94"},
-                        {"lightness":"88"},
-                        {"weight":"3.01"},
-                        {"invert_lightness":true}
-                    ]
-                },
-                {
-                    "featureType": "landscape",
-                    "stylers": [
-                        {"saturation": -100},
-                        {"lightness": 65},
-                        {"visibility": "on"}
-                    ]
-                },
-                {
-                    "featureType":"poi",
-                    "elementType":"all",
-                    "stylers":[
-                        {"visibility":"on"}
-                    ]
-                },
-                {
-                    "featureType":"road",
-                    "elementType":"all",
-                    "stylers":[
-                        {"saturation":-100},
-                        {"lightness":45}
-                    ]
-                },
-                {   "featureType":"road.highway",
-                    "elementType":"all",
-                    "stylers":[
-                        {"visibility":"simplified"}
-                    ]
-                },
-                {
-                    "featureType":"road.arterial",
-                    "elementType":"labels.icon",
-                    "stylers":[
-                        {"visibility":"off"}
-                    ]
-                },
-                {
-                    "featureType":"transit",
-                    "elementType":"all",
-                    "stylers":[
-                        {"visibility":"off"}
-                    ]
-                },
-                {
-                    "featureType":"water",
-                    "elementType":"all",
-                    "stylers":[
-                        {"visibility":"on"},
-                        {"invert_lightness":false},
-                        {"color":"#a1dcf5"},
-                        {"weight":3.83},
-                        {"saturation":-7},
-                        {"lightness":-7},
-                        {"gamma":0.77}]
-                }
-            ]
-            }; //MAP OPTIONS ENDS
+                    styles: [
+                      {
+                        "featureType":"administrative",
+                        "elementType":"labels.text.fill",
+                        "stylers":[
+                          {"color":"#444444"}
+                        ]
+                      },
+                      {
+                        "featureType":"administrative.country",
+                        "elementType":"geometry",
+                        "stylers":[
+                            {"visibility":"off"},
+                            {"hue":"#ff0000"},
+                            {"saturation":"94"},
+                            {"lightness":"88"},
+                            {"weight":"3.01"},
+                            {"invert_lightness":true}
+                        ]
+                      },
+                    {
+                      "featureType": "landscape",
+                      "stylers": [
+                          {"saturation": -100},
+                          {"lightness": 65},
+                          {"visibility": "on"}
+                      ]
+                    },
+                    {
+                      "featureType":"poi",
+                      "elementType":"all",
+                      "stylers":[
+                          {"visibility":"on"}
+                      ]
+                    },
+                    {
+                      "featureType":"road",
+                      "elementType":"all",
+                      "stylers":[
+                          {"saturation":-100},
+                          {"lightness":45}
+                      ]
+                    },
+                    {   "featureType":"road.highway",
+                      "elementType":"all",
+                      "stylers":[
+                          {"visibility":"simplified"}
+                      ]
+                    },
+                    {
+                      "featureType":"road.arterial",
+                      "elementType":"labels.icon",
+                      "stylers":[
+                          {"visibility":"off"}
+                      ]
+                    },
+                    {
+                      "featureType":"transit",
+                      "elementType":"all",
+                      "stylers":[
+                          {"visibility":"off"}
+                      ]
+                    },
+                    {
+                      "featureType":"water",
+                      "elementType":"all",
+                      "stylers":[
+                          {"visibility":"on"},
+                          {"invert_lightness":false},
+                          {"color":"#a1dcf5"},
+                          {"weight":3.83},
+                          {"saturation":-7},
+                          {"lightness":-7},
+                          {"gamma":0.77}]
+                    }
+                  ]
+                }; //MAP OPTIONS ENDS
 
-                // Get the HTML DOM element that will contain your map 
+                // Get the HTML DOM element that will contain your map
                 // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
+                var mapElement = document.getElementById('map');
 
                 // Create the Google Map using our element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
+                var map = new google.maps.Map(mapElement, mapOptions);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        var image = 'images/marker1.png';
-        var image1 = 'images/marker6.png';
+                var image = 'images/marker1.png';
+                var image1 = 'images/marker6.png';
 
 
 
@@ -160,12 +138,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x1.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x1.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Kostel */
         var point2 = new google.maps.Marker({
@@ -183,12 +161,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x2.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x2.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Kaplicka */
         var point3 = new google.maps.Marker({
@@ -206,12 +184,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x3.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x3.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Pranyř */
         var point4 = new google.maps.Marker({
@@ -229,12 +207,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x4.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x4.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Náměstí */
         var point5 = new google.maps.Marker({
@@ -252,12 +230,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x5.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x5.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Hřbitov */
         var point6 = new google.maps.Marker({
@@ -275,12 +253,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x6.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x6.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Most */
         var point7 = new google.maps.Marker({
@@ -298,12 +276,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x7.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x7.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Pošta */
         var point8 = new google.maps.Marker({
@@ -321,12 +299,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x8.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x8.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Hostinec */
         var point9 = new google.maps.Marker({
@@ -344,12 +322,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x9.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x9.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Pekařství */
         var point10 = new google.maps.Marker({
@@ -367,12 +345,12 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x10.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x10.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
+        });
 
         /* Škola */
         var point11 = new google.maps.Marker({
@@ -390,45 +368,30 @@
                 $("#map-popup").removeClass('show');
             });
                     //load content in popup
-            $('#map-popup_content').load("points/x11.html", {limit: 25}, 
+            $('#map-popup_content').load("points/x11.html", {limit: 25},
                 function (responseText, textStatus, XMLHttpRequest) {
-                    console.log(XMLHttpRequest)
+                    console.log(XMLHttpRequest);
                 }
             );
-        })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        });
 
 
         /*SNIMEK*/
 
-                var bounds = new google.maps.LatLngBounds(
+            var bounds = new google.maps.LatLngBounds(
             new google.maps.LatLng(48.693642, 14.067314),
             new google.maps.LatLng(48.698486, 14.081991));
 
         // The photograph is courtesy of the U.S. Geological Survey.
-        var srcImage = 'http://dolnivltavicezije.net23.net/mapa65procent.png';
+            var srcImage = './mapa65procent.png';
+        //var srcImage = 'http://dolnivltavicezije.net23.net/mapa65procent.png';
 
         // The custom DVOverlay object contains the DV image,
         // the bounds of the image, and a reference to the map.
         overlay = new DVOverlay(bounds, srcImage, map);
 
-            };//INIT MAP
+            } 
+            //INIT MAP
 
             function DVOverlay(bounds, image, map) {
 
